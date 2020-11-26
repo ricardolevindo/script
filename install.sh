@@ -15,3 +15,7 @@ sudo apt-get install wine
 #wine ./setup-lightshot.exe
 
 sudo snap install rambox
+
+sudo snap install thunderbird
+sudo snap install geforcenow
+sudo snap install translatium
