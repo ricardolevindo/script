@@ -1,3 +1,9 @@
+#sudo rm /etc/apt/preferences.d/nosnap.pref
+
+
+sudo apt update
+sudo apt install snapd
+
 
 #instalar captura de tela 
 sudo apt install flameshot
@@ -7,3 +13,5 @@ sudo apt-get install wine
 
 #wget http://app.prntscr.com/build/setup-lightshot.exe
 #wine ./setup-lightshot.exe
+
+sudo snap install rambox
