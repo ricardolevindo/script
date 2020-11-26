@@ -19,3 +19,42 @@ sudo snap install rambox
 sudo snap install thunderbird
 sudo snap install geforcenow
 sudo snap install translatium
+
+#Driver, mapper and GUI for Steam Controller, DS4 and similar controllers
+sudo snap install sc-controller
+
+sudo snap install sublime-text --classic
+
+sudo snap install postman
+
+sudo snap install android-studio --classic
+
+#sudo snap install warzone2100
+#sudo snap install marsshooter
+
+sudo snap install skype --classic
+sudo snap install slack --classic
+
+sudo snap install slack-term
+
+sudo snap install libreoffice
+
+#Hex Editor
+sudo snap install ghex-udt
+
+#kanban
+sudo snap install wekan
+
+#Interactive processes viewer
+sudo snap install htop
+
+#Fabulously kill processes
+sudo snap install fkill
+
+sudo snap install sftpclient
+
+#Disk Space Analyzer that saves hundreds of gigabytes!
+sudo snap install disk-space-saver
+
+#Create custom QR Codes
+sudo snap install qr-code-generator-desktop
