@@ -71,3 +71,8 @@ sudo snap install qr-code-generator-desktop
   apt update
 #And finally the openvpn3 package can be installed  
   apt install openvpn3
+  
+#Client Mongo
+sudo snap install robo3t-snap
+
+sudo snap install obs-studio
