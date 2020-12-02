@@ -76,3 +76,18 @@ sudo snap install qr-code-generator-desktop
 sudo snap install robo3t-snap
 
 sudo snap install obs-studio
+
+#Monitor de acesso a internet via terminal
+wget https://ufpr.dl.sourceforge.net/project/linuxfreedomfor/Linux/nbwmon%20bin/64bit/nbwmon
+sudo mv nbwmon /usr/bin/nbwmon
+sudo chmod +x /usr/bin/nbwmon
+# Exemplo de uso
+##nbwmon -n # nenhuma cor
+##nbwmon -u # graphmax unificado
+##nbwmon -i # interface de rede
+##nbwmon -d # segundos para atualizar
+##nbwmon -l # altura do gráfico
+# monitorar a conexão wireless (wlan0) atualizando cada segundo.
+#nbwmon-i wlan0 d 1
+
+
