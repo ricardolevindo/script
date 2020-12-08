@@ -1,0 +1,11 @@
+baixe o pacote de instalação RPM do site: https://www.oracle.com/tools/downloads/sqldev-v192-downloads.html
+
+instale com o alien
+sudo alien -i sqldeveloper-17.3.1.279.0537-1.noarch.rpm
+
+copiar o arquivo 
+sqldeveloper.desktop para a pasta /home/USERNAME/.local/share/applications/sqldeveloper.desktop
+
+# tornar o atalho executável
+chmod +x /home/USERNAME/.local/share/applications/sqldeveloper.desktop
+sudo update-desktop-database
