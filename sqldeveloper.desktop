@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Oracle SQL Developer
+GenericName=SQL Developer
+X-GNOME-FullName=Oracle SQL Developer
+Comment= A free integrated development environment that simplifies the development and management of Oracle Database
+Keywords=sql;developer;oracle;db;database
+Exec=/usr/local/bin/sqldeveloper
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=/opt/sqldeveloper/icon.png
+Categories=Admin
+X-AppStream-Ignore=true
