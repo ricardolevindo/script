@@ -90,4 +90,6 @@ sudo chmod +x /usr/bin/nbwmon
 # monitorar a conexão wireless (wlan0) atualizando cada segundo.
 #nbwmon-i wlan0 d 1
 
+sudo snap install intellij-idea-community --classic
+
 
