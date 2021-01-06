@@ -92,4 +92,26 @@ sudo chmod +x /usr/bin/nbwmon
 
 sudo snap install intellij-idea-community --classic
 
+#smartgit
+sudo add-apt-repository ppa:eugenesan/ppa
+sudo apt-get update
+sudo apt-get install smartgit
+sudo apt-get install smartgithg
+
+#Slack
+sudo snap install slack --classic
+
+#Gerenciador de senhas
+sudo snap install 1password --edge
+
+sudo snap install rambox
+sudo snap install pencilsheep
+sudo snap install inkscape
+sudo snap install vectr
+sudo snap install colorpicker-app
+sudo snap install gimp
+
+# para usar o Take Snapshot or record your desktop do Cinamon
+sudo apt-get install ffmpeg 
+sudo apt-get install xdotool  
 
