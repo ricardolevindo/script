@@ -115,3 +115,11 @@ sudo snap install gimp
 sudo apt-get install ffmpeg 
 sudo apt-get install xdotool  
 
+# captura de tela
+sudo add-apt-repository ppa:sylvain-pineau/kazam
+sudo apt-get update
+sudo apt-get install kazam
+sudo apt-get install python3-xlib python3-cairo
+#kazam --version
+#kazam -v
+
