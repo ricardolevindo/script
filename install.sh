@@ -123,3 +123,9 @@ sudo apt-get install python3-xlib python3-cairo
 #kazam --version
 #kazam -v
 sudo snap install aws-cli --classic
+
+#Instalar Docker Machine
+curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-Linux-x86_64 >/tmp/docker-machine
+sudo mv /tmp/docker-machine /usr/local/bin/docker-machine 
+chmod +x /usr/local/bin/docker-machine
+
