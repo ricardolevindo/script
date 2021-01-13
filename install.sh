@@ -122,4 +122,4 @@ sudo apt-get install kazam
 sudo apt-get install python3-xlib python3-cairo
 #kazam --version
 #kazam -v
-
+sudo snap install aws-cli --classic
