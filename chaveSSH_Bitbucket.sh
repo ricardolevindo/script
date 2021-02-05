@@ -19,4 +19,4 @@ cat ~/.ssh/id_rsa.pub | xclip -sel clip
 # alterar repositório de
 # https://<accountname>@bitbucket.org/timeanbetec/<reponame>.git
 # para
-# <accountname>@bitbucket.org:timeanbetec/<reponame>.git
+# git@bitbucket.org:timeanbetec/<reponame>.git
