@@ -1,8 +1,28 @@
 #sudo rm /etc/apt/preferences.d/nosnap.pref
 
 
+sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install snapd
+
+sudo apt install --install-recommends flatpak
+#ou
+#sudo apt install flatpak
+#ou 
+#sudo apt install flatpak
+#se tiver usando gnome  instale o plugin
+#apt install gnome-software-plugin-flatpak
+# atualizar repositório de gerenciamento
+flatpak remote-add gnome https://sdk.gnome.org/gnome.flatpakrepo
+
+#Video downloader 
+flatpak install --user https://flathub.org/repo/appstream/com.github.unrud.VideoDownloader.flatpakref
+#Para Atualizar
+flatpak --user update com.github.unrud.VideoDownloader
+#Para iniciar o VideoDownloader pelo terminal
+flatpak run com.github.unrud.VideoDownloader 
+#Para desisnstalar
+flatpak uninstall com.github.unrud.VideoDownloader
 
 
 #instalar captura de tela 
