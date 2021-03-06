@@ -76,6 +76,7 @@ sudo snap install qr-code-generator-desktop
 sudo snap install robo3t-snap
 
 sudo snap install obs-studio
+sudo apt install simplescreenrecorder
 
 #Monitor de acesso a internet via terminal
 wget https://ufpr.dl.sourceforge.net/project/linuxfreedomfor/Linux/nbwmon%20bin/64bit/nbwmon
