@@ -5,6 +5,17 @@ sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install snapd
 
+#Só lista pacotes instalados
+flatpak list
+snap list
+#Para remover, no Snap tudo do pacote será removido exceto o ‘core’
+flatpak remove nome-do-pacote
+snap remove nome-do-pacote
+#para remover tudo 
+flatpak remove --all
+#Remover somento o que não é mais necessário
+flatpak remove --unused
+
 sudo apt install --install-recommends flatpak
 #ou
 #sudo apt install flatpak
@@ -24,9 +35,102 @@ flatpak run com.github.unrud.VideoDownloader
 #Para desisnstalar
 flatpak uninstall com.github.unrud.VideoDownloader
 
+#Como instalar o app de geolocalização de fotos Geotagging no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.github.jmlich.geotagging.flatpakref
+flatpak --user update com.github.jmlich.geotagging
+flatpak run com.github.jmlich.geotagging
+flatpak uninstall com.github.jmlich.geotagging
+
+#Como instalar o reprodutor de mídia Clapper no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.github.rafostar.Clapper.flatpakref
+flatpak --user update com.github.rafostar.Clapper
+flatpak --user uninstall com.github.rafostar.Clapper
+flatpak run com.github.rafostar.Clapper
+
+#Como instalar o app de processamento de fotos Darktable no Linux via Flatpak
+flatpak install --from https://flathub.org/repo/appstream/org.darktable.Darktable.flatpakref
+flatpak --user update org.darktable.Darktable
+flatpak uninstall org.darktable.Darktable
+flatpak run org.darktable.Darktable
+
+#Como instalar o app de notas autoadesivas Notejot no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.github.lainsce.notejot.flatpakref
+flatpak --user update com.github.lainsce.notejot
+flatpak --user uninstall com.github.lainsce.notejot
+flatpak run com.github.lainsce.notejot
+
+#Como instalar o cliente Git Sublime Merge no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.sublimemerge.App.flatpakref
+flatpak --user update com.sublimemerge.App
+flatpak --user uninstall com.sublimemerge.App
+flatpak run com.sublimemerge.App
+
+#Como instalar a IDE para bancos de dados DataGrip no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.jetbrains.DataGrip.flatpakref
+flatpak --user update com.jetbrains.DataGrip
+flatpak run com.jetbrains.DataGrip
+flatpak --user uninstall com.jetbrains.DataGrip
+
+#Como instalar o Open Broadcaster no Linux via Flatpak
+flatpak install --from https://flathub.org/repo/appstream/com.obsproject.Studio.flatpakref
+flatpak --user update com.obsproject.Studio
+flatpak --user uninstall com.obsproject.Studio
+flatpak run com.obsproject.Studio
+
+#Como instalar o editor de sprites LibreSprite no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.github.libresprite.LibreSprite.flatpakref
+flatpak --user update com.github.libresprite.LibreSprite
+flatpak run com.github.libresprite.LibreSprite
+flatpak --user uninstall com.github.libresprite.LibreSprite
+
+#Como instalar o gerenciador de senhas NordPass no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.nordpass.NordPass.flatpakref
+flatpak --user update com.nordpass.NordPass
+flatpak run com.nordpass.NordPass
+flatpak --user uninstall com.nordpass.NordPass
+
+#Como instalar o capturador de telas FlameShot no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/org.flameshot.Flameshot.flatpakref
+flatpak --user update org.flameshot.Flameshot
+flatpak run org.flameshot.Flameshot
+flatpak --user uninstall org.flameshot.Flameshot
 
 #instalar captura de tela 
 sudo apt install flameshot
+
+#Como instalar o gerenciador de conexões EasySSH no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.github.muriloventuroso.easyssh.flatpakref
+flatpak --user update com.github.muriloventuroso.easyssh
+flatpak uninstall com.github.muriloventuroso.easyssh
+flatpak run com.github.muriloventuroso.easyssh
+
+#Como instalar o comparador de arquivos Meld no Linux via Flatpak
+flatpak install --from https://flathub.org/repo/appstream/org.gnome.meld.flatpakref
+flatpak --user update org.gnome.meld
+flatpak --user uninstall org.gnome.meld
+flatpak run org.gnome.meld
+
+#Como instalar o monitor de sistema StatusPilatus no Linux
+#Confira se o seu sistema é de 32 bits ou 64 bits, para isso, use o seguinte comando no terminal
+uname -m
+#Versão 64 bits (appimage)
+wget https://github.com/PilatusDevs/StatusPilatus/releases/download/0.5.0/StatusPilatus.0.5.0.AppImage -O statuspilatus.appimage
+chmod a+x statuspilatus.appimage
+sudo ./statuspilatus.appimage --install
+
+#Derivados Debian
+wget https://github.com/PilatusDevs/StatusPilatus/releases/download/0.5.0/StatusPilatus_0.5.0_amd64.deb -O statuspilatus.deb
+sudo dpkg -i statuspilatus.deb
+# ou
+sudo apt install ./statuspilatus.deb
+sudo apt-get install -f
+sudo apt-get remove statuspilatus*
+
+#Como instalar o app de estações de rádio Tuner no Linux via Flatpak
+flatpak install --user https://flathub.org/repo/appstream/com.github.louis77.tuner.flatpakref
+flatpak --user update com.github.louis77.tuner
+flatpak run com.github.louis77.tuner
+flatpak --user uninstall com.github.louis77.tuner
 
 #instalar wine
 sudo apt-get install wine
