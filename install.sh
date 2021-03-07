@@ -4,6 +4,10 @@
 ## cinnamon-menu-editor 
 ###
 
+### Terminal
+sudo apt install fish
+
+
 sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
 sudo apt install snapd
@@ -229,8 +233,6 @@ sudo apt-get install smartgithg
 #Slack
 sudo snap install slack --classic
 
-#Gerenciador de senhas
-sudo snap install 1password --edge
 
 sudo snap install rambox
 sudo snap install pencilsheep
