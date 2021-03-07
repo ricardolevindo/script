@@ -1,5 +1,8 @@
 #sudo rm /etc/apt/preferences.d/nosnap.pref
 
+###Incluir menu no cinnamon
+## cinnamon-menu-editor 
+###
 
 sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
