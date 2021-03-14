@@ -23,13 +23,6 @@ flatpak remove --all
 #Remover somento o que não é mais necessário
 flatpak remove --unused
 
-#VPN FortiClient 6.4
-wget -O - https://repo.fortinet.com/repo/6.4/ubuntu/DEB-GPG-KEY | sudo apt-key add -
-#Adicionar ao arquivo /etc/apt/sources.list
-deb [arch=amd64] https://repo.fortinet.com/repo/6.4/ubuntu/ /bionic multiverse
-sudo apt-get update
-sudo apt install forticlient
-
 sudo apt install --install-recommends flatpak
 #ou
 #sudo apt install flatpak
