@@ -203,6 +203,22 @@ sudo snap install qr-code-generator-desktop
 #And finally the openvpn3 package can be installed  
   apt install openvpn3
   
+#Firebird - SYSDBA - masterkey
+  sudo apt-get install libstdc++5
+  sudo apt-get -y install libncurses5 libtommath1
+  wget https://github.com/FirebirdSQL/firebird/releases/download/R2_5_9/FirebirdSS-2.5.9.27139-0.amd64.tar.gz
+  tar xf FirebirdSS-2.5.9.27139-0.amd64.tar.gz
+  cd FirebirdSS-2.5.9.27139-0.amd64
+  sudo ./install.sh
+  
+  # A seguir são apresentados os diretórios e arquivos mais importantes que são criados durante o processo de instalação aqui apresentado:
+  ## Diretório da instalação: /opt/firebird
+  ## Ferramenta ISQL: /opt/firebird/bin/isql
+  ## Arquivo de configuração: /opt/firebird/firebird.conf
+  ## Arquivo de log: /opt/firebird/firebird.log
+  ## Script para alterar a senha do SYSDBA: /opt/firebird/bin/changeDBAPassword.sh
+  ## Script para desinstalação do Firebird: /opt/firebird/bin/FirebirdUninstall.sh  
+  
 #Client Mongo
 sudo snap install robo3t-snap
 
