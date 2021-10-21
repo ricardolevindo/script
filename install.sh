@@ -151,6 +151,18 @@ sudo snap install thunderbird
 sudo snap install geforcenow
 sudo snap install translatium
 
+# Remote Desktop Client
+# Remmina is a remote desktop client written in GTK+, aiming to be useful for system administrators and travellers, 
+# who need to work with lots of remote computers in front of either large monitors or tiny netbooks.
+sudo snap install remmina
+sudo snap connect remmina:audio-record :audio-record
+sudo snap connect remmina:avahi-observe :avahi-observe
+sudo snap connect remmina:cups-control :cups-control
+sudo snap connect remmina:mount-observe :mount-observe
+sudo snap connect remmina:password-manager-service :password-manager-service
+
+
+
 #Driver, mapper and GUI for Steam Controller, DS4 and similar controllers
 sudo snap install sc-controller
 
