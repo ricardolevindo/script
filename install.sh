@@ -7,6 +7,8 @@
 ### Terminal
 sudo apt install fish
 
+#### Trafego de rede
+sudo apt install wireshark
 
 sudo add-apt-repository ppa:alexlarsson/flatpak
 sudo apt update
