@@ -4,12 +4,21 @@
 ## cinnamon-menu-editor 
 ###
 
+#Instalando Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+## A partir de agora todas configurações que você quer fazer como adicionar variáveis ambientes ou 
+## configurar seu terminal de qualquer forma utilize o arquivo ~/.zshrc e não mais o ~/.bash_profile ou derivados
+
 ### Terminal
 sudo apt install fish
 
 ### Sublime
 #Install the GPG key:
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+#Update apt sources and install Sublime Text
+sudo apt-get update
+sudo apt-get install sublime-text
+
 
 #Ensure apt is set up to work with https sources:
 sudo apt-get install apt-transport-https
@@ -19,11 +28,6 @@ sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 ##Dev
 echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
-#Update apt sources and install Sublime Text
-sudo apt-get update
-sudo apt-get install sublime-text
-
 
 #### Trafego de rede
 sudo apt install wireshark
