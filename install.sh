@@ -10,17 +10,28 @@ sudo apt install gedit
 sudo apt install nano
 # Instalar pacote ferramentas inclusive editor mcedit
 sudo apt install mc
+
+# thema dracula terminal
+sudo apt-get install dconf-cli
+git clone https://github.com/dracula/gnome-terminal
+cd gnome-terminal
+./install.sh
+
 # Terminal zsh
 sudo apt install zsh
 # Tornar o zsh padrão
 sudo gedit /etc/passwd
 # Oh my zsh 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-#Instalando Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ## A partir de agora todas configurações que você quer fazer como adicionar variáveis ambientes ou 
 ## configurar seu terminal de qualquer forma utilize o arquivo ~/.zshrc e não mais o ~/.bash_profile ou derivados
+
+#Thema Dracula para zsh
+git clone https://github.com/dracula/zsh.git
+#Mover o arquivo dracula.zsh-theme da pasta theme de zsh para ~/.oh-my-zsh/themes/
+#Mover a pasta lib/ de zsh para ~/.oh-my-zsh/themes/
+#Ativar o thema
+#alterar a configuração do arquivo ./.zshrc 
 
 ### Terminal
 sudo apt install fish
