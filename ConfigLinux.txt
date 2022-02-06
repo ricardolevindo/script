@@ -1,0 +1,2 @@
+Resolver adicionais do convidado no Virtual box Linux
+https://www.linuxbabe.com/linux-mint/install-virtualbox-guest-additions-in-linux-mint
