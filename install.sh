@@ -4,6 +4,19 @@
 ## cinnamon-menu-editor 
 ###
 
+# Editor gedit
+sudo apt install gedit
+# Editor nano
+sudo apt install nano
+# Instalar pacote ferramentas inclusive editor mcedit
+sudo apt install mc
+# Terminal zsh
+sudo apt install zsh
+# Tornar o zsh padrão
+sudo gedit /etc/passwd
+# Oh my zsh 
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 #Instalando Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ## A partir de agora todas configurações que você quer fazer como adicionar variáveis ambientes ou 
