@@ -1,3 +1,17 @@
+# Acesso remoto
+    sudo apt upgrade
+    sudo apt install xrdp xorgxrdp
+    sudo apt install xserver-xorg-input-all
+    sudo adduser xrdp ssl-cert
+    sudo ufw allow 3389/tcp
+    echo env -u SESSION_MANAGER -u DBUS_SESSION_BUS_ADDRESS cinnamon-session~/.xsession
+    
+# Anydesk
+# rustdesk
+# vinagre
+# remmina
+# X2Go - everywhere@home
+
 #sudo rm /etc/apt/preferences.d/nosnap.pref
 
 ###Incluir menu no cinnamon
