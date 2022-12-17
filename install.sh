@@ -21,6 +21,11 @@ hostnamectl
 ## cinnamon-menu-editor 
 ###
 
+#################################################
+#################################################
+###########           Editores        ###########
+#################################################
+#################################################
 # Editor gedit
 sudo apt install gedit
 # Editor nano
@@ -28,11 +33,30 @@ sudo apt install nano
 # Instalar pacote ferramentas inclusive editor mcedit
 sudo apt install mc
 
+### Sublime
+#Install the GPG key:
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+#Update apt sources and install Sublime Text
+sudo apt-get update
+sudo apt-get install sublime-text
+
+
+
+
 # thema dracula terminal
 sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal
 cd gnome-terminal
 ./install.sh
+
+
+#################################################
+#################################################
+###########          Shell            ###########
+#################################################
+#################################################
+## Visualizar o Shell Padrão
+ echo $SHELL
 
 # Terminal zsh
 sudo apt install zsh
@@ -50,15 +74,6 @@ git clone https://github.com/dracula/zsh.git
 #Ativar o thema
 #alterar a configuração do arquivo ./.zshrc 
 
-### Terminal
-sudo apt install fish
-
-### Sublime
-#Install the GPG key:
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-#Update apt sources and install Sublime Text
-sudo apt-get update
-sudo apt-get install sublime-text
 
 
 #Ensure apt is set up to work with https sources:
@@ -207,8 +222,7 @@ flatpak --user uninstall com.github.louis77.tuner
 #instalar wine
 sudo apt-get install wine
 
-#wget http://app.prntscr.com/build/setup-lightshot.exe
-#wine ./setup-lightshot.exe
+
 
 sudo snap install rambox
 
