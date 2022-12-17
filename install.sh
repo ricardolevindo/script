@@ -1,3 +1,6 @@
+# Visualizar informações da máquina
+hostnamectl
+
 # Acesso remoto
     sudo apt upgrade
     sudo apt install xrdp xorgxrdp
