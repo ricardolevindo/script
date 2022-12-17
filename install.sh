@@ -17,9 +17,6 @@ hostnamectl
 
 #sudo rm /etc/apt/preferences.d/nosnap.pref
 
-###Incluir menu no cinnamon
-## cinnamon-menu-editor 
-###
 
 #################################################
 #################################################
