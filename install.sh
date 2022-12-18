@@ -1,3 +1,8 @@
+# configurar o SSH no Linux
+sudo apt install openssh-server openssh-client
+# Iniciar o serviço SSH
+service sshd start
+
 # Visualizar informações da máquina
 hostnamectl
 
