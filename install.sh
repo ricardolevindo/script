@@ -60,21 +60,62 @@ cd gnome-terminal
 ## Visualizar o Shell Padrão
  echo $SHELL
 
-# Terminal zsh
-sudo apt install zsh
-# Tornar o zsh padrão
-sudo gedit /etc/passwd
-# Oh my zsh 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+## Atualize o cache do apt
+sudo apt update
+
+## Instale o ZSH
+sudo apt install zsh -y
+zsh --version
+## Onde está o binário do ZSH
+whereis zsh
+## Definir queo ZSH será o shell padrão
+sudo usermod -s /usr/bin/zsh $(whoami)
+### outra forma de tornar o ZSH o shell padrão é editar o arquivo passwd com o comando abaixo
+###sudo gedit /etc/passwd
+
+### Feche o terminal e abra novamente e observe a mensagem que surge
+### Tecle 2 para que o ZSH crie o arquivo .zshrc dentro do diretório home do usuário. É nesse arquivo que ficam as configurações do ZSH
+
+### Configurando a integração do ZSH com o Git
+## Instalar o git
+sudo apt install git
+### Framework adequado que provê facilidades/funcionalidades no shell para o uso do git com o shell ZSH - Oh-My-ZSH 
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+### Outra alternativa para instalar o Oh-My-ZSH
+##Sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+### O framework Oh-My-ZSH possui muitos plugins que extendem sua fucionalidades. 
+### Ao instalar o framework, conforme descrito anteriormente, dentro do diretório 
+### home foi criado um diretório .oh-my-zsh com o todo o seu código.
+### Dentro do diretório .oh-my-zsh, há um diretório plugins que contém os plugins 
+### disponíveis para o framework. O comando abaixo exibe os plugins disponíveis:
+ls ~/.oh-my-zsh/plugins
+
+## Instale o tema powerlevel9k
+sudo apt install zsh-theme-powerlevel9k
+## Adicione a configuração no arquivo .zshrc definindo que ele será o tema utilizado pelo ZSH
+### Será adicionado no final do arquivo .zshrc, o que está dentro do diretório home do usuário, o conteúdo entre aspas.
+echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc
+## Habilitando destaque de comandos (Syntax Highlighting)
+sudo apt install zsh-syntax-highlighting
+## Adicionar a configuração de Syntax Highlighting no final do arquivo .zshrc
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
+
 ## A partir de agora todas configurações que você quer fazer como adicionar variáveis ambientes ou 
 ## configurar seu terminal de qualquer forma utilize o arquivo ~/.zshrc e não mais o ~/.bash_profile ou derivados
 
-#Thema Dracula para zsh
+### Outro tema
+## Thema Dracula para zsh
 git clone https://github.com/dracula/zsh.git
 #Mover o arquivo dracula.zsh-theme da pasta theme de zsh para ~/.oh-my-zsh/themes/
 #Mover a pasta lib/ de zsh para ~/.oh-my-zsh/themes/
 #Ativar o thema
 #alterar a configuração do arquivo ./.zshrc 
+#################################################
+#################################################
+###########         Fim Shell         ###########
+#################################################
+#################################################
 
 
 
