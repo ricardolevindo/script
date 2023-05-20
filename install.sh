@@ -32,6 +32,13 @@ hostnamectl
 ###########           Redes           ###########
 #################################################
 #################################################
+ ### Instalar 
+ sudo add-apt-repository ppa:wireshark-dev/stable
+ sudo apt-get update
+ sudo apt-get install wireshark
+ ### Desinstalar
+ sudo add-apt-repository ppa:wireshark-dev/stable -r -y
+ sudo apt-get remove wireshark --auto-remove
 
  sudo apt-get install nload
  sudo apt-get install tcpdump
