@@ -32,11 +32,11 @@ hostnamectl
 ###########           Redes           ###########
 #################################################
 #################################################
- ### Instalar 
+ ### Instalar wireshark
  sudo add-apt-repository ppa:wireshark-dev/stable
  sudo apt-get update
  sudo apt-get install wireshark
- ### Desinstalar
+ ### Desinstalar wireshark
  sudo add-apt-repository ppa:wireshark-dev/stable -r -y
  sudo apt-get remove wireshark --auto-remove
 
