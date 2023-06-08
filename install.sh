@@ -1,5 +1,11 @@
+## notas no arquivo
+#https://linuxmasterclub.com/notejot/
+
 ## capturar teclas especiais ubuntu
 #https://www.omgubuntu.co.uk/screenkey-show-key-presses-screen-ubuntu
+
+## cronometro para projetos
+#https://sempreupdate.com.br/como-instalar-o-temporizador-countdown-no-linux/
 
 # SPOTIFY Linha de comando
 ncspot
