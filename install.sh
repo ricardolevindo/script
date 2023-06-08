@@ -1,3 +1,6 @@
+## capturar teclas especiais ubuntu
+#https://www.omgubuntu.co.uk/screenkey-show-key-presses-screen-ubuntu
+
 # SPOTIFY Linha de comando
 ncspot
 
