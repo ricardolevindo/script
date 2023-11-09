@@ -2,10 +2,10 @@ Navegadores:
   Chrome
   Opera
   Brave
-  Vivald
+  Vivald (Copiar favoritos e senha)
 
 Editores
-  Sublime3
+  Sublime3 (Listar arquivos de configuração)
 
 Desenvolvimento:
   Node Js
@@ -22,7 +22,7 @@ Client B.D.
   Robot3t
 
 Segurança:
-  FortiClient
+  FortiClient (Copiar configurações utilizadas da máquina antiga)
 
 Comunicação:
   RamBox
