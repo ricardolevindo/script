@@ -3,7 +3,15 @@ Navegadores:
   Opera
   Brave
   Vivald (Copiar favoritos e senha)
-
+Terminal
+  oh my zsh
+    sudo apt install zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        https://github.com/zdharma/fast-syntax-highlighting
+        https://github.com/zsh-users/zsh-autosuggestions
+        https://github.com/zsh-users/zsh-completions
+    https://github.com/romkatv/powerlevel10k
+  
 Editores
   Sublime3 (Listar arquivos de configuração)
 
