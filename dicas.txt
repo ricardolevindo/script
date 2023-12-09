@@ -1,0 +1,2 @@
+# trocar navegador padrão
+sudo update-alternatives --config x-www-browser
