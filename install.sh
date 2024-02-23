@@ -1,3 +1,34 @@
+## grafana observabilidade
+wget -qO- https://packages.grafana.com/gpg.key | sudo apt-key add -
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+sudo apt update
+sudo apt install grafana -y
+sudo systemctl daemon-reload
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+
+sudo systemctl stop grafana-server
+sudo systemctl restart grafana-server
+
+http://localhost:3001
+ou
+http://grafana.local:3001
+ou
+http://grafana.local
+
+editar /etc/hosts
+# incluir no fim do arquivo
+<ip da maquina> grafana.local
+
+primeiro login
+Email or username: admin
+Password: admin
+
+senha alterada para 
+Email or username: admin
+Password: admin1
+
+
 ## notas no arquivo
 #https://linuxmasterclub.com/notejot/
 
