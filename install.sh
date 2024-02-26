@@ -468,3 +468,11 @@ sudo snap install aws-cli --classic
 curl -L https://github.com/docker/machine/releases/download/v0.16.0/docker-machine-Linux-x86_64 >/tmp/docker-machine
 sudo mv /tmp/docker-machine /usr/local/bin/docker-machine 
 chmod +x /usr/local/bin/docker-machine
+
+#########################
+### FortiClient VPN
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/repo.fortinet.com.gpg] https://repo.fortinet.com/apt/ubuntu/ /ubuntu/" | sudo tee /etc/apt/sources.list.d/repo.fortinet.com.list
+# Importar a chave GPG do repositório
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 31265A3D4F2B4B20
+sudo apt update
+sudo apt install forticlient
