@@ -38,13 +38,14 @@
   Robot3t
 
 ## Segurança:
-  ### FortiClient FortiClient 7.0 - (Copiar configurações utilizadas da máquina antiga)
+  ### FortiClient
+  #### FortiClient FortiClient 7.0 - (Copiar configurações utilizadas da máquina antiga)
     wget -O - https://repo.fortinet.com/repo/7.0/ubuntu/DEB-GPG-KEY | sudo apt-key add -
     deb [arch=amd64] https://repo.fortinet.com/repo/7.0/ubuntu xenial multiverse
     sudo apt-get update
     sudo apt install forticlient
 
-  ### FortiClient FortiClient 6.4 - (Copiar configurações utilizadas da máquina antiga)
+  #### FortiClient FortiClient 6.4 - (Copiar configurações utilizadas da máquina antiga)
     wget -O - https://repo.fortinet.com/repo/6.4/ubuntu/DEB-GPG-KEY | sudo apt-key add -
     deb [arch=amd64] https://repo.fortinet.com/repo/6.4/ubuntu/ /bionic multiverse
     sudo apt-get update
