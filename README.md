@@ -65,3 +65,7 @@
 ## Ferramentas:  
   ### Verificar espaço em disco QDirStat
     sudo apt install qdirstat  
+
+  ### Joystick 
+    #### Anti micro
+      sudo apt install antimicro -y
