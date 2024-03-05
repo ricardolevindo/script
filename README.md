@@ -61,3 +61,7 @@
 
 ## Observabilidade:
   ### grafana
+
+## Ferramentas:  
+  ### Verificar espaço em disco QDirStat
+    sudo apt install qdirstat  
