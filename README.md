@@ -67,5 +67,5 @@
     sudo apt install qdirstat  
 
   ### Joystick 
-    #### Anti micro
-      sudo apt install antimicro -y
+   #### Anti micro
+     sudo apt install antimicro -y
