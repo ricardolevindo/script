@@ -1,5 +1,17 @@
 # scriptDebian
 
+## Instaladores
+  ### SNAP
+    # Se existir o arquivo /etc/apt/preferences.d/nosnap.pref ele deverá ser movido para pasta de documentos
+    sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
+    sudo apt update
+    sudo apt install snapd
+    # Testar instalação do Snap
+    $ snap install hello-world
+    hello-world 6.4 from Canonical✓ installed
+    $ hello-world
+    Hello World!
+
 ## Navegadores:
   ### Chrome
   ### Opera
@@ -27,6 +39,8 @@
   ### Java
   ### Python
   ### Insomnia
+  ### Postman
+    sudo snap install postman
   ### Flutter
 
 ## IDE:
