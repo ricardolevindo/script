@@ -69,3 +69,7 @@
   ### Joystick 
    #### Anti micro
      sudo apt install antimicro -y
+
+   #### JSTEST-GTK
+     https://community.linuxmint.com/software/view/jstest-gtk
+     https://jstest-gtk.gitlab.io/
