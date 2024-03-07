@@ -45,13 +45,77 @@
   ### Java
   ### Python
   ### Insomnia
+   ## APT
+   ### Add to sources
+   curl -1sLf \
+   'https://packages.konghq.com/public/insomnia/setup.deb.sh' \
+   | sudo -E distro=ubuntu codename=focal bash
+
+   sudo apt-get update
+   sudo apt-get install insomnia
+
+   ## SNAP (Melhor opção)
+   sudo snap install insomnia
+   sudo systemctl restart snapd.service
+  
   ### Postman
     sudo snap install postman
+    sudo systemctl restart snapd.service
+    
   ### Flutter
 
 ## IDE:
   ### VSCode
+   ### APT
+    # importar chave des assinatura GPC
+    cd /tmp && curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg && sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg && cd $HOME
+    # repositório oficial
+    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+    # atualizar repositório
+    sudo apt update  
+    ## Para instalar o Visual Studio Code, execute:
+    sudo apt install code
+
+   ### SNAP (Melhor opção)
+     sudo snap install code --classic
+     
   ### Android studio
+  ### Intelij idea
+   ## instalar o JRE e JDK 
+     ## Opção do openjdk
+     ## Para instalar o ambiente de desenvolvimento do OpenJDK:
+     sudo apt install openjdk-17-jdk
+     ## Para pesquisar outras versões disponíveis do OpenJDK, execute:
+     sudo apt search openjdk*
+
+     ## Opção do jdk proprietário
+     sudo apt install -y default-jdk default-jre  
+     
+     java --version
+     
+     ## faça download da versão communit
+     https://www.jetbrains.com/idea/download/#section=linux
+     wget https://download-cdn.jetbrains.com/idea/ideaIC-2022.2.3.tar.gz
+     ## extraia o arquivo
+     tar -xvzf idea*.tar.gz && mv idea*/ intellij-idea
+     sudo mv intellij-idea /opt
+     
+     cd /opt/intellij-idea/bin
+     ./idea.sh
+
+     sudo ln -s /opt/intellij-idea/bin/idea.sh /usr/bin/idea
+
+   ## SNAP (Melhor opção)  
+     sudo snap install intellij-idea-community --classic
+     sudo snap install intellij-idea-ultimate --classic
+     sudo snap install intellij-idea-educational --classic
+
+   ### Para atualizar o IntelliJ IDEA Community Edition:
+     sudo snap refresh intellij-idea-community
+   ### Para atualizar o IntelliJ IDEA Ultimate Edition:
+     sudo snap refresh intellij-idea-ultimate
+   ### Para atualizar o IntelliJ IDEA Education:
+     sudo snap refresh intellij-idea-educational
   
 ## Client B.D.
   DBeaver
