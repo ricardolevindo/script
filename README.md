@@ -6,6 +6,12 @@
     sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
     sudo apt update
     sudo apt install snapd
+
+    sudo systemctl start snapd
+    sudo systemctl enable snapd
+    
+    snap version
+    
     # Testar instalação do Snap
     $ snap install hello-world
     hello-world 6.4 from Canonical✓ installed
