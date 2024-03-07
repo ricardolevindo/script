@@ -35,6 +35,7 @@
   
 ## Editores
   ### Sublime3 (Listar arquivos de configuração)
+  ### Meld - DIFF
 
 ## Desenvolvimento:
   ### Node Js
