@@ -117,6 +117,40 @@
     sudo apt update
     sudo apt install -y dbeaver-ce
 
+## MongoDB
+    # MongoDB shell
+    wget -qO mongosh.zip "https://fastdl.mongodb.org/mongosh/latest/mongosh-ubuntu2004-x86_64-latest.zip"
+
+    # Extract the downloaded file
+    unzip mongosh.zip
+
+    # Move the mongosh binary to a system directory
+    sudo mv mongosh /usr/local/bin/
+
+    # Set the permissions for the mongosh binary
+    sudo chmod +x /usr/local/bin/mongosh
+
+    # Verify the installation
+    
+    mongosh --version
+
+    ###############################################
+
+    # Robo 3T
+    wget -qO robo3t-1.4.4-linux-x86_64.tar.gz "https://robomongo.org/files/robo-3t-1.4.4-linux-x86_64.tar.gz"
+
+    # Extract the downloaded package
+    tar -xzf robo3t-1.4.4-linux-x86_64.tar.gz
+
+    # Move the extracted directory to /opt
+    sudo mv robo3t-1.4.4-linux-x86_64 /opt/
+
+    # Create a symbolic link to the Robo 3T executable
+    sudo ln -s /opt/robo3t-1.4.4-linux-x86_64/bin/robo3t /usr/local/bin/
+
+    # Verify the installation
+    robo3t --version
+
 ## FortiClient
 
     # FortiClient FortiClient 6.4 - (Copiar configurações utilizadas da máquina antiga)
