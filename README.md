@@ -1,160 +1,110 @@
-# scriptDebian
+#!/bin/bash
 
-## Instaladores
-  ### SNAP
-    # Se existir o arquivo /etc/apt/preferences.d/nosnap.pref ele deverá ser movido para pasta de documentos
-    sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
-    sudo apt update
-    sudo apt install snapd
+## Atualizar sistema e instalar pacotes básicos
+sudo apt update && sudo apt install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common \
+    git \
+    wget \
+    xz-utils \
+    tree \
+    build-essential
 
-    sudo systemctl start snapd
-    sudo systemctl enable snapd
-    
-    snap version
-    
-    # Testar instalação do Snap
-    $ snap install hello-world
-    hello-world 6.4 from Canonical✓ installed
-    $ hello-world
-    Hello World!
+## Instalar o Snap
+sudo apt install -y snapd
+sudo systemctl start snapd
+sudo systemctl enable snapd
 
-## Navegadores:
-  ### Chrome
-  ### Opera
-  ### Brave
-  ### Vivald (Copiar favoritos e senha)
-  
-## Terminal
-  ### oh my zsh
-    sudo apt install zsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-        https://github.com/zdharma/fast-syntax-highlighting
-        https://github.com/zsh-users/zsh-autosuggestions
-        https://github.com/zsh-users/zsh-completions
-    https://github.com/romkatv/powerlevel10k
-  
-## Editores
-  ### Sublime3 (Listar arquivos de configuração)
-  ### Meld - DIFF
+## Instalar o Zsh e Oh My Zsh
+sudo apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-## Desenvolvimento:
-  ### Node Js
-    pacotes nodejs global (kill-port)
+## Instalar o Node.js e NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install node
 
-  ### NVM
-  ### Instant Client Oracle
-  ### Java
-  ### Python
-  ### Insomnia
-   ## APT
-   ### Add to sources
-   curl -1sLf \
-   'https://packages.konghq.com/public/insomnia/setup.deb.sh' \
-   | sudo -E distro=ubuntu codename=focal bash
+## Instalar o NPM e Yarn
+sudo apt install -y npm
+npm install -g yarn
 
-   sudo apt-get update
-   sudo apt-get install insomnia
+## Instalar o Docker e Docker Compose
+sudo apt install -y docker.io
+sudo usermod -aG docker $USER
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
-   ## SNAP (Melhor opção)
-   sudo snap install insomnia
-   sudo systemctl restart snapd.service
-  
-  ### Postman
-    sudo snap install postman
-    sudo systemctl restart snapd.service
-    
-  ### Flutter
+## Instalar o Java
+sudo apt install -y default-jdk
 
-## IDE:
-  ### VSCode
-   ### APT
-    # importar chave des assinatura GPC
-    cd /tmp && curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg && sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg && cd $HOME
-    # repositório oficial
-    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
-    # atualizar repositório
-    sudo apt update  
-    ## Para instalar o Visual Studio Code, execute:
-    sudo apt install code
+## Instalar o Python
+sudo apt install -y python3 python3-pip
 
-   ### SNAP (Melhor opção)
-     sudo snap install code --classic
-     
-  ### Android studio
-  ### Intelij idea
-   ## instalar o JRE e JDK 
-     ## Opção do openjdk
-     ## Para instalar o ambiente de desenvolvimento do OpenJDK:
-     sudo apt install openjdk-17-jdk
-     ## Para pesquisar outras versões disponíveis do OpenJDK, execute:
-     sudo apt search openjdk*
+## Instalar o PostgreSQL
+sudo apt install -y postgresql
 
-     ## Opção do jdk proprietário
-     sudo apt install -y default-jdk default-jre  
-     
-     java --version
-     
-     ## faça download da versão communit
-     https://www.jetbrains.com/idea/download/#section=linux
-     wget https://download-cdn.jetbrains.com/idea/ideaIC-2022.2.3.tar.gz
-     ## extraia o arquivo
-     tar -xvzf idea*.tar.gz && mv idea*/ intellij-idea
-     sudo mv intellij-idea /opt
-     
-     cd /opt/intellij-idea/bin
-     ./idea.sh
+## Instalar o Oracle Instant Client
+wget -qO- https://raw.githubusercontent.com/oracle/instantclient-deb/master/instantclient-basic-linux.x64-19.8.0.0.0db.deb.sh | sudo bash
+sudo apt install -y oracle-instantclient19.8-basic
 
-     sudo ln -s /opt/intellij-idea/bin/idea.sh /usr/bin/idea
+## Instalar o Flutter
+sudo snap install flutter --classic
 
-   ## SNAP (Melhor opção)  
-     sudo snap install intellij-idea-community --classic
-     sudo snap install intellij-idea-ultimate --classic
-     sudo snap install intellij-idea-educational --classic
+## Instalar o Visual Studio Code
+sudo apt install -y software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt update && sudo apt install -y code
 
-   ### Para atualizar o IntelliJ IDEA Community Edition:
-     sudo snap refresh intellij-idea-community
-   ### Para atualizar o IntelliJ IDEA Ultimate Edition:
-     sudo snap refresh intellij-idea-ultimate
-   ### Para atualizar o IntelliJ IDEA Education:
-     sudo snap refresh intellij-idea-educational
-  
-## Client B.D.
-  DBeaver
-  Robot3t
+## Instalar o IntelliJ IDEA
+sudo snap install intellij-idea-community --classic
+sudo snap install intellij-idea-ultimate --classic
+sudo snap install intellij-idea-educational --classic
 
-## Segurança:
-  ### FortiClient
-  #### FortiClient FortiClient 7.0 - (Copiar configurações utilizadas da máquina antiga)
-    wget -O - https://repo.fortinet.com/repo/7.0/ubuntu/DEB-GPG-KEY | sudo apt-key add -
-    deb [arch=amd64] https://repo.fortinet.com/repo/7.0/ubuntu xenial multiverse
-    sudo apt-get update
-    sudo apt install forticlient
+## Instalar o DBeaver
+sudo add-apt-repository -y ppa:serge-rider/dbeaver-ce
+sudo apt update
+sudo apt install -y dbeaver-ce
 
-  #### FortiClient FortiClient 6.4 - (Copiar configurações utilizadas da máquina antiga)
-    wget -O - https://repo.fortinet.com/repo/6.4/ubuntu/DEB-GPG-KEY | sudo apt-key add -
-    deb [arch=amd64] https://repo.fortinet.com/repo/6.4/ubuntu/ /bionic multiverse
-    sudo apt-get update
-    sudo apt install forticlient    
+## Instalar o FortiClient
+wget -O - https://repo.fortinet.com/repo/7.0/ubuntu/DEB-GPG-KEY | sudo apt-key add -
+deb [arch=amd64] https://repo.fortinet.com/repo/7.0/ubuntu xenial multiverse
+sudo apt-get update
+sudo apt install -y forticlient
 
-## Comunicação:
-  ### RamBox
-  ### Electronim
+## Instalar o Insomnia
+curl -1sLf 'https://packages.konghq.com/public/insomnia/setup.deb.sh' | sudo -E bash -
+sudo apt-get update
+sudo apt-get install -y insomnia
 
-## Diversos:
-  ### ncspot
-  ### flameshot
+## Instalar o Postman
+sudo snap install postman
 
-## Observabilidade:
-  ### grafana
+## Instalar o Anydesk
+sudo apt install -y anydesk
 
-## Ferramentas:  
-  ### Verificar espaço em disco QDirStat
-    sudo apt install qdirstat  
+## Instalar o Remmina
+sudo apt install -y remmina
 
-  ### Joystick 
-   #### Anti micro
-     sudo apt install antimicro -y
+## Instalar o RustDesk
+sudo snap install rustdesk
 
-   #### JSTEST-GTK
-     https://community.linuxmint.com/software/view/jstest-gtk
-     https://jstest-gtk.gitlab.io/
+## Instalar o QDirStat
+sudo apt install -y qdirstat
+
+## Instalar o Antimicro
+sudo apt install -y antimicro
+
+## Instalar o JSTest-GTK
+sudo apt install -y jstest-gtk
+
+## Instalar o Grafana
+sudo apt install -y grafana
+
+## Instalar o ncspot
+sudo apt install -y ncspot
+
+## Instalar o Flameshot
+sudo apt install -y flameshot
