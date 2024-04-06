@@ -13,13 +13,14 @@ sudo apt update && sudo apt install -y \
     build-essential
 
 ## Instalar o Snap
-  sudo apt install -y snapd
-  sudo systemctl start snapd
-  sudo systemctl enable snapd
+  ### Comando 
+      sudo apt install -y snapd
+      sudo systemctl start snapd
+      sudo systemctl enable snapd
 
 ## Instalar o Zsh e Oh My Zsh
-sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sudo apt install -y zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## Instalar o Node.js e NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
