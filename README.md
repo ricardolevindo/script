@@ -1,4 +1,4 @@
-#!/bin/bash
+# scriptDebian
 
 ## Atualizar sistema e instalar pacotes básicos
 sudo apt update && sudo apt install -y \
