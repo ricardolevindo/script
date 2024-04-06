@@ -13,9 +13,9 @@ sudo apt update && sudo apt install -y \
     build-essential
 
 ## Instalar o Snap
-sudo apt install -y snapd
-sudo systemctl start snapd
-sudo systemctl enable snapd
+  sudo apt install -y snapd
+  sudo systemctl start snapd
+  sudo systemctl enable snapd
 
 ## Instalar o Zsh e Oh My Zsh
 sudo apt install -y zsh
