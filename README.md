@@ -12,6 +12,11 @@
     tree \
     build-essential
 
+## The Software Development Kit Manager
+    # sdkman
+    # sdkman.io
+    curl -s "https://get.sdkman.io" | bash
+
 ## Snap
     # Se existir o arquivo /etc/apt/preferences.d/nosnap.pref ele deverá ser movido para pasta de documentos
     sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
