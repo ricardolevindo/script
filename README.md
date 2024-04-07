@@ -53,6 +53,9 @@
     sudo chmod +x /usr/local/bin/docker-compose
 
 ## Java
+    # Multiplas versões (Recomendo olhar isso)
+    ## https://github.com/shyiko/jabba
+
     # Opção do openjdk
     # Para instalar o ambiente de desenvolvimento do OpenJDK:
     sudo apt install openjdk-17-jdk
