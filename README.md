@@ -78,7 +78,19 @@
     sudo snap install flutter --classic
 
 ## Visual Studio Code
-    sudo snap install code --classic
+    # Remover versões antigas
+    ## sudo apt-get remove android-studio --auto-remove
+    ## sudo apt-get autoremove
+
+    # Instalar versão mais atualizada
+    sudo add-apt-repository ppa:maarten-fonville/android-studio
+    sudo apt-get update
+    sudo apt-get install android-studio
+   
+    ######################
+    
+    # Para instalar uma versão "Preview"
+    sudo apt-get install android-studio-preview
 
 ## IntelliJ IDEA
      # APT
