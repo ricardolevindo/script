@@ -221,3 +221,7 @@
 
 ## Flameshot
     sudo apt install -y flameshot
+
+## Produtividade
+    https://obsidian.md/
+    https://ticktick.com/features
