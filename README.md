@@ -1,5 +1,11 @@
 # scriptDebian
 
+## Instalar pacotes impressora
+    sudo apt install printer-driver-escpr
+    sudo adduser seu-usuario lpadmin
+    http://localhost:631/printers/ 
+    
+ 
 ## Atualizar sistema e instalar pacotes básicos
     sudo apt update && sudo apt install -y \
     apt-transport-https \
