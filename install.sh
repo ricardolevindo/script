@@ -1,3 +1,5 @@
+## verificar partições
+lsblk -f
 ## verificar uso de disco com ncdu
 sudo apt install ncdu
 sudo ncdu /home
