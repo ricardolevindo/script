@@ -1,3 +1,8 @@
+## robot3t
+sudo apt update
+sudo apt install snapd
+sudo snap install robo3t-snap
+
 ## verificar partições
 lsblk -f
 ## verificar uso de disco com ncdu
