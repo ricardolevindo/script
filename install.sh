@@ -1,3 +1,10 @@
+#!/bin/bash
+# Script de instalação de ferramentas de desenvolvimento
+# Inclui sistema de histórico de uso
+
+# Registrar uso deste script
+source "$(dirname "$0")/historico-lib.sh" 2>/dev/null && registrar_uso_script 2>/dev/null
+
 ## robot3t
 sudo apt update
 sudo apt install snapd
