@@ -234,7 +234,7 @@
     sudo apt install -y grafana
 
 ## ncspot
-    sudo apt install -y ncspot
+    snap install ncspot
 
 ## Flameshot
     sudo apt install -y flameshot
