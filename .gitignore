@@ -1,0 +1,18 @@
+# Arquivos temporários
+*.tmp
+*.temp
+*~
+
+# Logs locais (o histórico é armazenado em ~/.config/)
+*.log
+
+# Arquivos de teste
+test-*.sh
+
+# Cache e arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*.backup
+*.bak

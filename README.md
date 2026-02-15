@@ -1,5 +1,16 @@
 # scriptDebian
 
+## 📊 Histórico de Uso
+
+**Novo!** Este repositório agora inclui um sistema de histórico de uso dos scripts.
+
+```bash
+# Para ver seu histórico de uso:
+./meu-historico.sh
+```
+
+Veja [HISTORICO-USO.md](HISTORICO-USO.md) para documentação completa.
+
 ## Instalar pacotes impressora
     sudo apt install printer-driver-escpr
     sudo adduser seu-usuario lpadmin
