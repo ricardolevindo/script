@@ -169,6 +169,17 @@ source ~/.bashrc
 echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
 source ~/.zshrc
 ```
+
+## Editar configurações
+## nano ~/.config/atuin/config.toml
+## Segurança
+### filter_mode = "global"
+## Ignonar comandos sensíveis
+### history_filter = ["secret", "token", "password"]
+## Melhorar UX
+### style = "compact"
+### inline_height = 20
+
 ######################
 ######################
 ######################
