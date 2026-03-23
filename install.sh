@@ -134,6 +134,46 @@ cd gnome-terminal
 ## Atualize o cache do apt
 sudo apt update
 
+######################
+######################
+######################
+# Atuin - Shell History & Executable Runbooks
+## 1. Instalar via script oficial
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | bash
+```
+
+## Isso vai:
+## baixar o binário
+## instalar em ~/.atuin/bin ou /usr/local/bin
+
+2. Adicionar ao PATH
+```bash
+export PATH="$HOME/.atuin/bin:$PATH"
+```
+
+3. Para persistir
+```bash
+echo 'export PATH="$HOME/.atuin/bin:$PATH"' >> ~/.bashrc
+```
+
+4. Integrar com o shell
+4.1. Bash
+```bash
+echo 'eval "$(atuin init bash)"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+4.2. Zsh
+```bash
+echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+source ~/.zshrc
+```
+######################
+######################
+######################
+
+
 ## Instale o ZSH
 sudo apt install zsh -y
 zsh --version
