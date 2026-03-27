@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# Registrar uso deste script
+source "$(dirname "$0")/historico-lib.sh" 2>/dev/null && registrar_uso_script 2>/dev/null
+
 BOLD="\e[1m"
 YELLOW="\e[33m"
 NO_COLOR="\033[0m"
